@@ -12,6 +12,7 @@ const adultsArray = peopleArray.filter(person => person.age >= 18);
   const namesArray = adultsArray.map(person => person.name);
   return namesArray;
 }
+console.log(getNamesOfAdultS(people))
 
 
 //Write a function that takes an array of objects, where each object represents a product with
@@ -34,7 +35,7 @@ function groupProducts(products) {
   });
   return result;
 }
-console.log(result)
+console.log(groupProducts(products))
 
 
 //Given an array of objects, where each object represents a student with a name and an array of scores, 
@@ -46,7 +47,7 @@ const students = [
   { name: 'Jim', scores: [70, 80, 75] },
   { name: 'Jill', scores: [85, 90, 84] },
 ];
-function getTopStudents(projects) {
+function topStudentsNames(projects) {
   const topStudents = [];
   for (let project of projects) {
     const name = project.name;
@@ -68,8 +69,8 @@ function getTopStudents(projects) {
   { name: 'Jill', 
   scores: [85, 90, 84] },
 ];
-const topStudents = getTopStudents(student_Performance);
-console.log(topStudents); // Output: ["John", "Sarah", "Mary"
+const topStudents = topStudentsNames(student_Performance);
+console.log(topStudents); 
 
 //Given an object representing a car, with properties for the make, model, year, and a method to
 // display the car's information, write a function that takes the car object and adds a new method
@@ -83,7 +84,7 @@ const car = {
     console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
   },
 };
-function addAgeMethod(car) {
+function ageMethod(car) {
   var currentYear = new Date().getFullYear();
   car.age = function() {
     return currentYear - this.year;
@@ -101,9 +102,9 @@ var myCar = {
   }
 
 };
-console.log(myCar.age());
+console.log(myCar);
 
-addAgeMethod(myCar);
+ageMethod(myCar);
 
 
 
